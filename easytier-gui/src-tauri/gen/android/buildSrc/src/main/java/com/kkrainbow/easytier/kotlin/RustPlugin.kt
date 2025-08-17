@@ -32,14 +32,14 @@ open class RustPlugin : Plugin<Project> {
                 create("universal") {
                     dimension = "abi"
                     ndk {
-                        abiFilters += abiList
+                        // abiFilters += abiList
                     }
                 }
                 defaultArchList.forEachIndexed { index, arch ->
                     create(arch) {
                         dimension = "abi"
                         ndk {
-                            abiFilters.add(defaultAbiList[index])
+                            // abiFilters.add(defaultAbiList[index])
                         }
                     }
                 }
