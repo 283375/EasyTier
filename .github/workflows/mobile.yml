@@ -128,7 +128,7 @@ jobs:
       - name: Compress
         run: |
           mkdir -p ./artifacts/objects/
-          mv easytier-gui/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release.apk ./artifacts/objects/
+          mv easytier-gui/src-tauri/gen/android/app/build/outputs/apk/universal/release/*.apk ./artifacts/objects/
           
           if [[ $GITHUB_REF_TYPE =~ ^tag$ ]]; then
             TAG=$GITHUB_REF_NAME
